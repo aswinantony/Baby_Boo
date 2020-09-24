@@ -56,30 +56,32 @@
     }
   });
 
-  // document.getElementsByClassName("")
 
-  //Timer
-  // timer(){
-  //   // One day Time in ms (milliseconds) 
-  //   var one_day = 1000 * 60 * 60 * 24
+// Adding Expected Arrival Time of Boo
+  $(window).on('load', function () {
+    var one_day = 1000 * 60 * 60 * 24
 
-  //   // To set present_dates to two variables 
-  //   var present_date = new Date();
+    // To set present_dates to two variables 
+    var present_date = new Date();
 
-  //   // 0-11 is Month in JavaScript 
-  //   var expected = new Date(2021, 0, 21)
+    // 0-11 is Month in JavaScript 
+    var expected = new Date(2021, 0, 21)
 
-  //   // // To Calculate next year's Christmas if passed already. 
-  //   // if (present_date.getMonth() == 11 && present_date.getdate() > 25)
-  //   //     christmas_day.setFullYear(christmas_day.getFullYear() + 1)
+    // // To Calculate next year's Christmas if passed already. 
+    // if (present_date.getMonth() == 11 && present_date.getdate() > 25)
+    //     christmas_day.setFullYear(christmas_day.getFullYear() + 1)
 
-  //   // To Calculate the result in milliseconds and then converting into days 
-  //   var Result = Math.round(expected.getTime() - present_date.getTime()) / (one_day);
+    // To Calculate the result in milliseconds and then converting into days 
+    var Result = Math.round(expected.getTime() - present_date.getTime()) / (one_day);
 
-  //   // To remove the decimals from the (Result) resulting days value 
-  //   var Final_Result = Result.toFixed(0);
-  //   document.getElementsByClassName("counter-up").innerHTML = Final_Result;
-  // }
+    // To remove the decimals from the (Result) resulting days value 
+    var Final_Result = Result.toFixed(0);
+    document.getElementsByClassName("col-lg-3 col-md-6")[0].getElementsByTagName("span")[0].innerText = Math.round(Final_Result / 7);
+    document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-md-0")[0].getElementsByTagName("span")[0].innerText = Final_Result;
+    document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[0].getElementsByTagName("span")[0].innerText = Final_Result * 24;
+    document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[1].getElementsByTagName("span")[0].innerText = (Final_Result * 24) * 60;
+
+  });
 
   // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function () {
