@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d dist"
+    "deploy":"gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,9 @@
   },
   "author": "aswin",
   "license": "ISC",
-  "homepage": "https://github.com/aswinantony/Baby_Boo",
+  "homepage":"https://aswinantony.github.io/baby_boo",
   "bugs": {
     "url": "https://github.com/aswinantony/Baby_Boo/issues"
-  }
+  },
+  "homepage": "https://github.com/aswinantony/Baby_Boo#readme"
 }
