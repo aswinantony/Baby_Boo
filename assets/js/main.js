@@ -83,11 +83,14 @@
   $(window).on('load', function () {
     var one_day = 1000 * 60 * 60 * 24
 
+    var test = " hello";
+
     // To set present_dates to two variables 
     var present_date = new Date();
 
     // 0-11 is Month in JavaScript 
     var expected = new Date(2021, 0, 21)
+    var Start = new Date(2020, 3, 19)
 
     // // To Calculate next year's Christmas if passed already. 
     // if (present_date.getMonth() == 11 && present_date.getdate() > 25)
@@ -95,15 +98,23 @@
 
     // To Calculate the result in milliseconds and then converting into days 
     var Result = Math.round(expected.getTime() - present_date.getTime()) / (one_day);
+    var For_Weeks = Math.round((present_date.getTime() - Start.getTime()) / (one_day) / 7);
 
     // To remove the decimals from the (Result) resulting days value 
     var Final_Result = Result.toFixed(0);
+    var Weeks_Round = For_Weeks.toFixed(0);
     document.getElementsByClassName("col-lg-3 col-md-6")[0].getElementsByTagName("span")[0].innerText = Math.round(Final_Result / 7);
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-md-0")[0].getElementsByTagName("span")[0].innerText = Final_Result;
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[0].getElementsByTagName("span")[0].innerText = Final_Result * 24;
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[1].getElementsByTagName("span")[0].innerText = (Final_Result * 24) * 60;
 
-    // document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0].childNodes[3].textContent = " 24 Weeks";
+    var Weeks = document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0];
+    Weeks.insertAdjacentHTML("beforeend", " " + Weeks_Round + " Weeks");
+    // document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0].lastChild.innerHTML = " 24.5 Weeks";
+    // // var strong = Weeks.appendChild
+    // Weeks.ch = " 24.5 Weeks";
+    // document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0].childNodes[3].textContent = " " + Math.round(Final_Result1 / 7) + " weeks";
+
 
   });
 
