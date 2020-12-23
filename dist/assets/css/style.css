@@ -852,7 +852,12 @@ section {
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #90c8fc;
+  color: #47aeff;
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-pinkicon-left, .testimonials .testimonial-item .quote-pinkicon-right {
+  color: #eeade0;
   font-size: 26px;
 }
 
@@ -863,6 +868,19 @@ section {
 }
 
 .testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item .quote-pinkicon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-pinkicon-right {
   display: inline-block;
   right: -5px;
   position: relative;
