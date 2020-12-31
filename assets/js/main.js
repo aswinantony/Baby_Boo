@@ -109,7 +109,7 @@
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[1].getElementsByTagName("span")[0].innerText = (Final_Result * 24) * 60;
 
     var Weeks = document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0];
-    Weeks.insertAdjacentHTML("beforeend", " " + Weeks_Round + " Weeks");
+    Weeks.insertAdjacentHTML("beforeend", " " + "Around " + Weeks_Round + " Weeks");
     // document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0].lastChild.innerHTML = " 24.5 Weeks";
     // // var strong = Weeks.appendChild
     // Weeks.ch = " 24.5 Weeks";
