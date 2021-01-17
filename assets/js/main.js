@@ -89,7 +89,7 @@
     var present_date = new Date();
 
     // 0-11 is Month in JavaScript 
-    var expected = new Date(2021, 0, 14)
+    var expected = new Date(2021, 0, 8)
     var Start = new Date(2020, 3, 5)
 
     // // To Calculate next year's Christmas if passed already. 
@@ -97,7 +97,9 @@
     //     christmas_day.setFullYear(christmas_day.getFullYear() + 1)
 
     // To Calculate the result in milliseconds and then converting into days 
-    var Result = Math.round(expected.getTime() - present_date.getTime()) / (one_day);
+    // var Result = Math.round(expected.getTime() - present_date.getTime()) / (one_day);
+    // Trying
+    var Result = Math.round(present_date.getTime() - expected.getTime()) / (one_day);
     var For_Weeks = Math.round((present_date.getTime() - Start.getTime()) / (one_day) / 7);
 
     // To remove the decimals from the (Result) resulting days value 
@@ -108,8 +110,9 @@
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[0].getElementsByTagName("span")[0].innerText = Final_Result * 24;
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[1].getElementsByTagName("span")[0].innerText = (Final_Result * 24) * 60;
 
-    var Weeks = document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0];
-    Weeks.insertAdjacentHTML("beforeend", " " + "Around " + Weeks_Round + " Weeks");
+    //For age
+    // var Weeks = document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0];
+    // Weeks.insertAdjacentHTML("beforeend", " " + "Around " + Weeks_Round + " Weeks");
     // document.getElementsByClassName("col-lg-6")[1].getElementsByTagName("li")[0].lastChild.innerHTML = " 24.5 Weeks";
     // // var strong = Weeks.appendChild
     // Weeks.ch = " 24.5 Weeks";
