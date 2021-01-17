@@ -104,7 +104,7 @@
 
     // To remove the decimals from the (Result) resulting days value 
     var Final_Result = Result.toFixed(0);
-    var Weeks_Round = For_Weeks.toFixed(0);
+    // var Weeks_Round = For_Weeks.toFixed(0);
     document.getElementsByClassName("col-lg-3 col-md-6")[0].getElementsByTagName("span")[0].innerText = Math.round(Final_Result / 7);
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-md-0")[0].getElementsByTagName("span")[0].innerText = Final_Result;
     document.getElementsByClassName("col-lg-3 col-md-6 mt-5 mt-lg-0")[0].getElementsByTagName("span")[0].innerText = Final_Result * 24;
